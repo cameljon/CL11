@@ -83,13 +83,13 @@ bool MultipleChoiceQuestion::AskQuestion()
 	cout << m_question << endl;
 	for (int i = 0; i < 4; i++)
 	{
-		cout << i << ". " << m_answers[i] << endl;
+		cout << i + 1 << ". " << m_answers[i] << endl;
 	}
 	int answer;
 	cout << "What is your answer? ";
 	cin >> answer;
-
-	if (answer == m_correctIndex)
+	
+	if (answer - 1 == m_correctIndex)
 	{
 		cout << "Correct" << endl;
 		return true;
